@@ -1,1 +1,234 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+:root {
+    --white: #fff;
+    --gray: #ededed;
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+    --shadow-light: rgba(225, 225, 225, 0.1);
+    --gradient: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+    --gradient-light: linear-gradient(0deg, rgb(230 153 0 / 10%) 0, rgb(250 237 122 / 50%) 100%);
+    --gray-dark: #343d4b;
+    --box-shadow:0 0 70px -10px rgba(0, 0, 0, 0.2);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    /* background-color: var(--gray-dark); */
+    background: linear-gradient(-45deg, #343d4b 0, #252C36 100%);/* W3C */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+}
+
+.container {
+    width: 700px;
+    height: 550px;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.left-data {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    -webkit-box-shadow: var( --box-shadow);
+    box-shadow: var( --box-shadow);
+}
+
+.right-data {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 90%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 1em 2em;
+    flex-direction: column;
+    -webkit-box-shadow: var( --box-shadow);
+    box-shadow: var( --box-shadow);
+    background-color: #222831;
+}
+
+.left-data img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.weather-data {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.location {
+    color: var(--white);
+    font-size: 1.2em;
+}
+
+.location img {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.time {
+    margin: 5px 0;
+}
+
+.temperature {
+    color: var(--white);
+    font-size: 4em;
+    font-weight: 900;
+}
+
+.timeBlock {
+    color: var(--white)
+}
+
+.locationBlock img {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.date {
+    color: var(--white);
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.more-info-container {
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    box-shadow: 0 0 50px -5px rgb(0 0 0 / 25%);
+
+}
+
+.info-block {
+    width: 50%;
+    padding: 1.5em 1em;
+    text-align: center;
+}
+
+.info-block__label {
+    margin-bottom: 8px;
+}
+
+.info-block__label img {
+    width: 2em;
+
+    display: block;
+    margin: 0 auto 5px auto;
+}
+
+.info-block__label span {
+    color: var(--white);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.info-block__value {
+    color: var(--white);
+}
+
+.search {
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+.search input {
+    background-color: var(--shadow-light);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 1em;
+    color: var(--gray);
+    font-size: 0.8em;
+    width: 100%;
+    padding-left: 2em;
+}
+
+input::placeholder {
+    color: var(--gray);
+}
+
+label.search-Label {
+    color: var(--white);
+    margin-bottom: 1em;
+    display: block;
+}
+
+label.search-Label img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.title {
+    color: var(--white);
+}
+@media (max-width: 768px) {
+    body{
+        display: block;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        display: block;
+        background-color: #222831;
+    }
+    .left-data {
+        width: 100%;
+        height: 40%;
+        border-radius: 0;
+    }
+    .right-data {
+        height: auto;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color: #222831;
+    }
+}
